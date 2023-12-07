@@ -4,7 +4,10 @@ import "./RightPane.css";
 const RightPane = (props) => {
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    window.location.href = "https://app.loch.one/welcome";
+    const form = event.target;
+    const emailInput = form.querySelector('input[type="email"]');
+    const emailValue = emailInput.value;
+    if (emailValue) window.location.href = "https://app.loch.one/welcome";
   };
   return (
     <div className="right-pane">
