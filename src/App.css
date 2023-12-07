@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; /* Ensures that padding and border are included in the element's total width and height */
+}
+
+.App {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  font-family: "Inter", sans-serif;
+}
+
+@media only screen and (max-width: 767px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+  }
+  .notification-container {
+    display: none;
+  }
+  .section--one,
+  .section--two,
+  .section--three {
+    flex-direction: column;
+  }
+}
