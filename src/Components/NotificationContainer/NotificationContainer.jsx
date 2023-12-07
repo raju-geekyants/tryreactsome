@@ -16,21 +16,23 @@ const NotificationContainer = (props) => {
     // centerMode: true,
   };
   return (
-    <div className="notification-container">
-      <Slider {...settings}>
-        <Notification />
-        <NotificationChecks
-          title="Notify me when any wallets move more than"
-          droptext="$1,000.00"
-          icon={<Bars />}
-        />
-        <NotificationChecks
-          title="Notify me when any wallet dormant for"
-          droptext="> 30 days"
-          icon={<ClockIcon />}
-          description="becomes active"
-        />
-      </Slider>
+    <div className="notification-container-overlay">
+      <div className="notification-container">
+        <Slider {...settings}>
+          <Notification />
+          <NotificationChecks
+            title="Notify me when any wallets move more than"
+            droptext="$1,000.00"
+            icon={<Bars />}
+          />
+          <NotificationChecks
+            title="Notify me when any wallet dormant for"
+            droptext="> 30 days"
+            icon={<ClockIcon />}
+            description="becomes active"
+          />
+        </Slider>
+      </div>
     </div>
   );
 };

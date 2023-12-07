@@ -2,19 +2,25 @@ import React from "react";
 import "./RightPane.css";
 
 const RightPane = (props) => {
+  const onSubmitHandler = (event) => {
+    event.preventDefault();
+    window.location.href = "https://app.loch.one/welcome";
+  };
   return (
     <div className="right-pane">
       <div className="signup-form">
         <div className="form--header">
           <h2 className="form--heading">Sign up for exclusive access.</h2>
-          <div className="form--input-holder">
+          <form className="form--input-holder" onSubmit={onSubmitHandler}>
             <input
-              type="text"
+              type="email"
               placeholder="Your email address"
               className="form--input"
             />
-            <button className="form--submit">Get started</button>
-          </div>
+            <button type="submit" className="form--submit">
+              Get started
+            </button>
+          </form>
         </div>
 
         <p className="form--description">

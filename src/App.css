@@ -7,21 +7,88 @@
 .App {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   font-family: "Inter", sans-serif;
+}
+
+/* Tablets */
+@media only screen and (min-width: 768px) and (max-width: 1400px) {
+  /* Your tablet styles here */
+  .App {
+    display: block;
+    height: 150vh !important;
+  }
+  .left-pane {
+    padding-bottom: 24px;
+  }
+  .right-pane {
+    padding-top: 84px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
   .App {
-    display: flex;
-    flex-direction: column;
+    display: block;
+    height: 200vh !important;
   }
+
   .notification-container {
-    display: none;
+    padding-top: 12px !important;
+    flex-shrink: 0;
+    height: 300px;
   }
+
+  .notification-plain h3,
+  .notification-plain h4 {
+    font-size: 12px !important;
+  }
+
+  img {
+    width: 200px !important;
+    height: 200px !important;
+  }
+
+  .testimonial-content {
+    font-size: 12px !important;
+  }
+  .testimonial-header h3,
+  .testimonial-header h4 {
+    font-size: 16px !important;
+  }
+
+  h3,
+  h2 {
+    font-size: 24px !important;
+  }
+  h4 {
+    font-size: 18px !important;
+  }
+
+  p {
+    font-size: 12px !important;
+  }
+
   .section--one,
   .section--two,
   .section--three {
     flex-direction: column;
+    flex-shrink: 0;
+  }
+
+  .section--two {
+    margin-top: 154px !important;
+  }
+
+  .section--three {
+    padding-bottom: 24px;
+  }
+
+  .left-pane {
+    padding-left: 24px !important;
+    overflow: hidden;
+  }
+
+  .signup-form {
+    margin-top: 96px;
   }
 }
