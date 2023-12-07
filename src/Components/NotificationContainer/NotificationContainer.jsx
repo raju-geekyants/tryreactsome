@@ -16,8 +16,10 @@ const NotificationContainer = (props) => {
     // centerMode: true,
   };
   return (
-    <div className="notification-container-overlay">
-      <div className="notification-container">
+    <div className="notification-container">
+      <div className="notification-container-overlay"></div>
+      <div className="notification-container-overlay--left"></div>
+      <div>
         <Slider {...settings}>
           <Notification />
           <NotificationChecks
